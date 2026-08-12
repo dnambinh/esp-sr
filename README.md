@@ -111,8 +111,8 @@ The product names, logos, and brands associated with the wake words listed in th
 
 ## Speech Command Recognition
 
-| Supported Targets | ESP32    | ESP32-S3 | ESP32-P4 | ESP32-S31 |
-| ----------------- | -------- | -------- | -------- | --------- |
+| Supported Targets | ESP32-S3 | ESP32-P4 | ESP32-S31 |
+| ----------------- | -------- | -------- | --------- |
 
 Espressif's speech command recognition model **MultiNet** is specially designed to provide a flexible off-line speech command recognition model. With this model, you can easily add your own speech commands, eliminating the need to train model again.
 
@@ -120,10 +120,11 @@ Currently, Espressif **MultiNet** supports up to 300 Chinese or English speech c
 
 The following MultiNet models are supported in esp-sr:
 
-|language         |           ESP32            |         ESP32-S3              |     ESP32-P4/ESP32-S31        |
-|:--------------- | :-------------------------:| :----------------------------:| :----------------------------:|
-|Chinese          | mn2_cn                     | mn5q8_cn, mn6_cn, mn7_cn      |  mn7_cn                       |
-|English          |                            | mn5q8_en, mn6_en, mn7_en      |  mn7_en                       |
+|language         |         ESP32-S3              |     ESP32-P4/ESP32-S31        |
+|:--------------- | :----------------------------:| :----------------------------:|
+|Chinese          | mn5q8_cn, mn6_cn, mn7_cn      |  mn7_cn                       |
+|English          | mn5q8_en, mn6_en, mn7_en      |  mn7_en                       |
+
 
 ## Audio Front End
 

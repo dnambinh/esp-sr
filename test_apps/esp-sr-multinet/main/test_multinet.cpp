@@ -16,7 +16,6 @@
 #include "esp_mn_models.h"
 #include "da_kai_kong_tiao.h"
 #include "tell_me_a_joke.h"
-#include "alexa.h"
 #include "dl_lib_convq_queue.h"
 #include <sys/time.h>
 #include "esp_mn_speech_commands.h"
