@@ -1,4 +1,19 @@
-test_apps/esp-sr:
+test_apps/esp-sr-wakenet:
+  enable:
+    - if: IDF_TARGET in ["esp32s3", "esp32", "esp32p4", "esp32s31"]
+      temporary: false
+
+test_apps/esp-sr-multinet:
+  enable:
+    - if: IDF_TARGET in ["esp32s3", "esp32", "esp32p4", "esp32s31"]
+      temporary: false
+
+test_apps/esp-sr-vadnet:
+  enable:
+    - if: IDF_TARGET in ["esp32s3", "esp32", "esp32p4", "esp32s31"]
+      temporary: false
+
+test_apps/esp-sr-afe:
   enable:
     - if: IDF_TARGET in ["esp32s3", "esp32", "esp32p4", "esp32s31"]
       temporary: false

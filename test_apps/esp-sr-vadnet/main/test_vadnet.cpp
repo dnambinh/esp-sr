@@ -15,11 +15,10 @@
 #include "esp_vadn_iface.h"
 #include "esp_vadn_models.h"
 #include "hilexin.h"
-#include "hiesp.h"
 #include "dl_lib_convq_queue.h"
 #include <sys/time.h>
 
-TEST_CASE("vadnet create/destroy API & memory leak", "[wn]")
+TEST_CASE("vadnet create/destroy API & memory leak", "[vadn]")
 {
     vTaskDelay(500 / portTICK_PERIOD_MS);
     int start_size = heap_caps_get_free_size(MALLOC_CAP_8BIT);
@@ -72,7 +71,7 @@ TEST_CASE("vadnet create/destroy API & memory leak", "[wn]")
     TEST_ASSERT_EQUAL(true, (mem_leak) < 1000 && last_end_size == first_end_size);
 }
 
-TEST_CASE("vadnet detect API & cpu loading", "[wn]")
+TEST_CASE("vadnet detect API & cpu loading", "[vadn]")
 {
     vTaskDelay(500 / portTICK_PERIOD_MS);
     srmodel_list_t *models = esp_srmodel_init("model");

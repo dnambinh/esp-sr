@@ -1,5 +1,4 @@
 pytest
-pytest-embedded-idf
-pytest-embedded-serial-esp
+pytest-embedded-idf[serial]
 pytest-rerunfailures
 pytest-timeout

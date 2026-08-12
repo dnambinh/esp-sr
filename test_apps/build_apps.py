@@ -30,6 +30,7 @@ IGNORE_WARNINGS = [
     r'\'1\' is not a valid value for the bool symbol SOC_PCNT_GROUPS',
     r'\'task_stack\' defined but not used',
     r'\'task_state\' defined but not used',
+    r'missing initializer for member \'jpeg_encode_cfg_t::pixel_reverse\'',
 ]
 
 def _get_idf_version():
