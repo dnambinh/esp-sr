@@ -146,6 +146,16 @@ build_esp_sr:
       - IMAGE: [espressif/idf:release-v5.4, espressif/idf:v5.5.2, espressif/idf:release-v5.5, espressif/idf:release-v6.0]
         EXAMPLES_PATH: "test_apps/esp-sr"
 
+build_esp32s31:
+  extends:
+    - .build_test_template
+    - .rules:build:test_esp_sr
+  variables:
+    IMAGE: espressif/idf:release-v6.1
+    EXAMPLES_PATH: "test_apps/esp-sr"
+  script:
+    - python ./test_apps/build_apps.py $EXAMPLES_PATH -t esp32s31
+
 
 build_esp_tts:
   extends:

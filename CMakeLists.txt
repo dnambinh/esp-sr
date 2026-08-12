@@ -1,4 +1,4 @@
-if((${IDF_TARGET} STREQUAL "esp32s3") OR (${IDF_TARGET} STREQUAL "esp32p4") OR (${IDF_TARGET} STREQUAL "esp32") OR (${IDF_TARGET} STREQUAL "esp32c3") OR (${IDF_TARGET} STREQUAL "esp32c5") OR (${IDF_TARGET} STREQUAL "esp32c6") OR  (${IDF_TARGET} STREQUAL "esp32s2") OR (${IDF_TARGET} STREQUAL "esp32s31"))
+if(("${IDF_TARGET}" STREQUAL "esp32s3") OR ("${IDF_TARGET}" STREQUAL "esp32p4") OR ("${IDF_TARGET}" STREQUAL "esp32") OR ("${IDF_TARGET}" STREQUAL "esp32c3") OR ("${IDF_TARGET}" STREQUAL "esp32c5") OR ("${IDF_TARGET}" STREQUAL "esp32c6") OR ("${IDF_TARGET}" STREQUAL "esp32s2") OR ("${IDF_TARGET}" STREQUAL "esp32s31"))
     set(TARGET_LIB_PATH "${IDF_TARGET}")
     
     if(CONFIG_IDF_TARGET_ESP32P4)
@@ -87,7 +87,7 @@ if((${IDF_TARGET} STREQUAL "esp32s3") OR (${IDF_TARGET} STREQUAL "esp32p4") OR (
         vadnet
         wakenet)
 
-    if(${IDF_TARGET} STREQUAL "esp32")
+    if("${IDF_TARGET}" STREQUAL "esp32")
         add_prebuilt_library(multinet2_ch "${CMAKE_CURRENT_SOURCE_DIR}/lib/${TARGET_LIB_PATH}/libmultinet2_ch.a" PRIV_REQUIRES ${COMPONENT_NAME})
         list(APPEND sr_libs multinet2_ch)
     endif()
