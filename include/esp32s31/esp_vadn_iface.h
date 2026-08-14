@@ -114,6 +114,15 @@ typedef int (*esp_vadn_iface_op_set_energy_threshold_t)(model_iface_data_t *mode
 typedef float (*esp_vadn_iface_op_get_energy_threshold_t)(model_iface_data_t *model);
 
 /**
+ * @brief Get the averaged frame energy of one input channel
+ *
+ * @param model The model object to query
+ * @param channel Channel index, starting from zero
+ * @returns the averaged mean square energy in raw sample^2 units
+ */
+typedef float (*esp_vadn_iface_op_get_energy_t)(model_iface_data_t *model, int channel);
+
+/**
  * @brief Feed samples of an audio stream to the vad model and detect whether is
  * voice.
  *
@@ -196,6 +205,7 @@ typedef struct {
     esp_vadn_iface_op_get_channel_state_t get_channel_state;
     esp_vadn_iface_op_set_energy_threshold_t set_energy_threshold;
     esp_vadn_iface_op_get_energy_threshold_t get_energy_threshold;
+    esp_vadn_iface_op_get_energy_t get_energy;
 } esp_vadn_iface_t;
 
 #ifdef __cplusplus
